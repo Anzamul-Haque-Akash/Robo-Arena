@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/TGF"]
+	path = Assets/Plugins/TGF
+	url = git@github.com:ThunderGamesStudio/TGF.git
