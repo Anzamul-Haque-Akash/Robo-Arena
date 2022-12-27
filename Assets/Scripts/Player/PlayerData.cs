@@ -6,5 +6,6 @@ namespace Arean.Player
     public class PlayerData : ScriptableObject
     {
         public float m_PlayerSpeed;
+        public int m_CollictiveCount;
     }
 }
