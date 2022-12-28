@@ -9,16 +9,18 @@ namespace Arean.Collectable_Object
         private void Start()
         {
             transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f).SetEase(Ease.InQuad);
-            transform.DORotate(new Vector3(0f, 360f, 0f), 1f, RotateMode.FastBeyond360).
+            transform.DORotate(new Vector3(0f, 360f, 0f), 2f, RotateMode.FastBeyond360).
                 SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
         }
         public void OnCollect()
         {
-            transform.DOScale(new Vector3(0f, 0f, 0f), 0.5f).SetEase(Ease.InQuad).OnComplete(() =>
+            transform.DOScale(new Vector3(0f, 0f, 0f), 0.2f).SetEase(Ease.Linear).OnComplete(() =>
             {
                 transform.position = Vector3.zero;
                 transform.gameObject.SetActive(false);
                 transform.DOScale(new Vector3(1f, 1f, 1f), 0.1f);
+                
+                Destroy(gameObject);
             });
         }
         

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Arean.Player
@@ -7,5 +8,6 @@ namespace Arean.Player
     {
         public float m_PlayerSpeed;
         public int m_CollictiveCount;
+
     }
 }

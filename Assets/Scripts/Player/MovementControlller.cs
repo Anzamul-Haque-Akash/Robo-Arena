@@ -1,11 +1,9 @@
-using DG.Tweening;
 using UnityEngine;
 
 namespace Arean.Player
 {
-    public class PlayerControlller : MonoBehaviour
+    public class MovementControlller : MonoBehaviour
     {
-        [SerializeField] private PlayerAttackController m_PlayerAttackController;
         [SerializeField] private PlayerAnimController m_PlayerAnimController;
         [SerializeField] private PlayerData m_PlayerData;
         private Touch _touch;
@@ -35,16 +33,11 @@ namespace Arean.Player
             else
             {
                 m_PlayerAnimController.Idle();
-                m_PlayerAttackController.Attack();
             }
         }
         private void Move(int horizontal)
         {
             transform.Rotate(0, horizontal * m_PlayerData.m_PlayerSpeed *Time.deltaTime, 0);
         }
-    }
-
-    internal class PlayerAnimControlller
-    {
     }
 }

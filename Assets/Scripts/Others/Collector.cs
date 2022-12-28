@@ -1,7 +1,8 @@
 using Arean.Interfaces;
+using Arean.Player;
 using UnityEngine;
 
-namespace Arean.Player
+namespace Arean.Others
 {
     public class Collector : MonoBehaviour
     {

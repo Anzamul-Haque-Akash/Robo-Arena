@@ -20,7 +20,7 @@ namespace Arean.Collectable_Object
         [Button]
         public void SpawnObject()
         {
-            DOVirtual.DelayedCall(2f, delegate
+            DOVirtual.DelayedCall(1f, delegate
             {
                 GameObject obj = Instantiate(m_ColectableObject1, Vector3.zero, Quaternion.identity);
 
