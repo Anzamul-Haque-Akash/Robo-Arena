@@ -1,3 +1,4 @@
+using Arean.Others;
 using UnityEngine;
 
 namespace Arean.Player

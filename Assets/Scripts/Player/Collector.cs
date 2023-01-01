@@ -1,8 +1,7 @@
 using Arean.Interfaces;
-using Arean.Player;
 using UnityEngine;
 
-namespace Arean.Others
+namespace Arean.Player
 {
     public class Collector : MonoBehaviour
     {
@@ -10,8 +9,11 @@ namespace Arean.Others
         private void OnTriggerEnter(Collider other)
         {
             ICollectable iCollectable = other.GetComponent<ICollectable>();
-            iCollectable.OnCollect();
-            m_PlayerData.m_CollictiveCount++;
+            if (iCollectable != null)
+            {
+                iCollectable.OnCollect();
+                m_PlayerData.m_CollictiveCount++;
+            }
         }
     }
 }

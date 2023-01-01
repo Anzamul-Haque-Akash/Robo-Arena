@@ -18,12 +18,6 @@ namespace Arean.Player
             m_Anim.SetParameter(AnimHashes.IsRunRight , true, AnimatorParamType.Bool);
             m_Anim.SetParameter(AnimHashes.IsRunLeft , false, AnimatorParamType.Bool);
         }
-        
-        public void Attack()
-        {
-            m_Anim.SetParameter(AnimHashes.IsShoot, true, AnimatorParamType.Trigger);
-        }
-        
         public void Idle()
         {
             m_Anim.SetParameter(AnimHashes.IsRunRight , false, AnimatorParamType.Bool);

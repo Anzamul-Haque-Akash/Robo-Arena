@@ -30,14 +30,6 @@ namespace Arean.Others
             DOVirtual.Float(currentHealth, currentHealth - damageAmount, 0.5f, delegate(float value)
             {
                 m_HealthbarSprite.fillAmount = value;
-
-                // if (m_HealthbarSprite.fillAmount <= 0)
-                // {
-                //     Debug.Log("Death");
-                //
-                //     GameObject obj = transform.root.gameObject;
-                //     Destroy(obj);
-                // }
             });
         }
     }
